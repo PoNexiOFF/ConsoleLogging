@@ -1,0 +1,5 @@
+{
+    "RED": "\\x1b[31m",
+    "BRIGHT_RED": "\\x1b[91m",
+    "RESET": "\\x1b[0m"
+}

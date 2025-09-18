@@ -1,0 +1,10 @@
+{
+    "ERROR": {
+        "code": "ERROR",
+        "color": "RED"
+    },
+    "DEBUG": {
+        "code": "",
+        "color": ""
+    }
+}
