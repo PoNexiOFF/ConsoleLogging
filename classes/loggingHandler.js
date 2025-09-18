@@ -1,18 +1,32 @@
 // ./classes/loggingHandler.js
+const { LogColor } = require("../constants/LogColor")
 const { getColor } = require("../functions/getColors")
 
-class log {
+class LogEntry {
     constructor ({ text, color, code, style } = {}) {
-        const colorData = getColor(style || color)
+        if (!color && !style) {
+            throw new Error("No color or style provided")
+        }
 
-        console.log(colorData.code)
+        if (!text) {
+            throw new Error("No text provided")
+        }
 
-        this.text = text || 'No text provided'
-        this.color = colorData === false ? "Color undefined" : colorData.color
-        this.code = code || colorData.code
+        this.text = text
+        const colorData = getColor(style?.color || color)
+        if (colorData === false) {
+            throw new Error("No color found")
+        }
+
+        this.color = colorData
+        this.code = code || style?.code || "DEBUG"
+    }
+
+    displayError() {
+        return console.log(`${new Date()} ${this.color}[${this.code}]${getColor(LogColor.RESET)} ${this.text}`)
     }
 }
 
 module.exports = {
-    log
+    LogEntry
 }

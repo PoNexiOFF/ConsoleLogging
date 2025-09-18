@@ -1,7 +1,13 @@
 // ./index.js
-const { log } = require("./classes/loggingHandler") 
+const { LogEntry } = require("./classes/loggingHandler") 
+const { LogStyle } = require("./constants/LogStyle")
+const { LogColor } = require("./constants/LogColor")
 
 module.exports = {
     // Classes
-    log
+    LogEntry,
+
+    // Constants
+    LogColor,
+    LogStyle
 }

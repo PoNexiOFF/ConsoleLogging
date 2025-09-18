@@ -1,4 +1,5 @@
-const { log } = require("./index")
+const { LogEntry, LogColor, LogStyle } = require("./index")
 
-const newLog = new log({ text: "test", color: "BRIGHT_RED" })
+const newLog = new LogEntry({ text: "text", color: LogColor.YELLOW })
 console.log(newLog)
+newLog.displayError()
