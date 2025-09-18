@@ -5,7 +5,7 @@ class log {
     constructor ({ text, color, code, style } = {}) {
         const colorData = getColor(style || color)
 
-        console.log()
+        console.log(colorData.code)
 
         this.text = text || 'No text provided'
         this.color = colorData === false ? "Color undefined" : colorData.color
