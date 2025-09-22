@@ -10,27 +10,27 @@ const { LogColor } = require("./LogColor");
 const LogStyle = {
     ERROR: {
         code: "ERROR",
-        color: LogColor.BRIGHT_RED,
+        color: LogColor.RED,
     },
 
     WARNING: {
         code: "WARN",
-        color: LogColor.BRIGHT_YELLOW,
+        color: LogColor.YELLOW,
     },
 
     INFO: {
         code: "INFO",
-        color: LogColor.BRIGHT_BLUE,
+        color: LogColor.BLUE,
     },
 
     SUCCESS: {
         code: "SUCCESS",
-        color: LogColor.BRIGHT_GREEN,
+        color: LogColor.GREEN,
     },
 
     DEBUG: {
         code: "DEBUG",
-        color: LogColor.BRIGHT_CYAN,
+        color: LogColor.CYAN,
     },
 };
 

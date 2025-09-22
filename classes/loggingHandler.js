@@ -1,8 +1,20 @@
 // ./classes/loggingHandler.js
 const { LogColor } = require("../constants/LogColor")
 const { getColor } = require("../functions/getColors")
+const { formatDate } = require("../functions/formatTime")
+
+/**
+* @typedef {Object} LogOptions
+* @property {string} text
+* @property {string} [color]
+* @property {string} [style]
+* @property {string} [code]
+*/
 
 class LogEntry {
+    /**
+    * @param {LogOptions} options
+    */
     constructor ({ text, color, code, style } = {}) {
         if (!color && !style) {
             throw new Error("No color or style provided")
@@ -23,7 +35,7 @@ class LogEntry {
     }
 
     displayError() {
-        return console.log(`${new Date()} ${this.color}[${this.code}]${getColor(LogColor.RESET)} ${this.text}`)
+        return console.log(`${formatDate(new Date())} ${this.color}[${this.code}]${getColor(LogColor.RESET)} ${this.text}`)
     }
 }
 
