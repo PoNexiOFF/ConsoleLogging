@@ -1,3 +1,4 @@
+// ./lib/typedefs/LogColor.js
 /**
  * @typedef {
  *   'RESET' |

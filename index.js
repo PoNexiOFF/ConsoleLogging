@@ -1,7 +1,7 @@
 // ./index.js
-const { LogEntry } = require("./classes/loggingHandler") 
-const { LogStyle } = require("./constants/LogStyle")
-const { LogColor } = require("./constants/LogColor")
+const { LogEntry } = require("./classes/LogEntry") 
+const { LogStyle } = require("./typedefs/LogStyle")
+const { LogColor } = require("./typedefs/LogColor")
 
 module.exports = {
     // Classes

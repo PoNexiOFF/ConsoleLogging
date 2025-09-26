@@ -1,3 +1,4 @@
+// ./lib/typedefs/LogStyle.js
 const { LogColor } = require("./LogColor");
 
 /**

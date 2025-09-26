@@ -1,0 +1,1 @@
+// faire le même système que LogEntry sauf qu'a la place de continuer a executer le code, le code va s'arrêter (throw)
