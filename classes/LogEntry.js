@@ -13,7 +13,7 @@ const { LogStyle } = require("../typedefs/LogStyle")
 */
 
 class LogEntry {
-    #isValid = false
+    #error = false
 
     /**
     * @param {LogOptions} options
@@ -21,35 +21,36 @@ class LogEntry {
    
     constructor ({ text, color, code, style } = {}) {
         if (!color && !style) {
-            new LogEntry({ text: `Missing parameters: "color" or "style"`, style: LogStyle.ERROR }).display()
+            this.#error = `Missing parameters: "color" or "style"`;
             return 
         }
 
         if (!text) {
-            new LogEntry({ text: `Missing parameters: "text"`, style: LogStyle.ERROR }).display()
-            return 
+            this.#error = `Missing parameters: "text"`; 
+            return
         }
 
         const colorData = getColor(style?.color || color)
         if (colorData === false) {
-            new LogEntry({ text: `Color not found`, style: LogStyle.ERROR }).display()
+            this.#error = `Color not found`;
             return 
         }
 
         this.text = text
         this.color = colorData
+        this.style = style || null
         this.code = code || style?.code || "DEBUG"
-        this.#isValid = true
-
-        if (style) {
-            this.style = style
-        }
     }
 
-    display() {
-        if (this.#isValid === false) return 
+    display(silent = false) {
         const date = new Date()
-        console.log(`${formatDate(date)} ${this.color}[${this.code}]${getColor(LogColor.RESET)} ${this.text}`)
+
+        if (this.#error !== false) {
+            console.log(`${formatDate(date)} ${getColor(LogColor.RED)}[ERROR]${getColor(LogColor.RESET)} ${this.#error}`)
+        } else {
+            console.log(`${formatDate(date)} ${this.color}[${this.code}]${getColor(LogColor.RESET)} ${this.text}`)
+        }
+
         return {
             date: date
         }
