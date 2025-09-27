@@ -1,4 +1,5 @@
-const { LogEntry, LogColor, LogStyle } = require("./index")
+// ./main.ts
+import { LogEntry, LogColor, LogStyle } from "./src/index";
 
 const parameters = [
     { text: "The code is running!", style: LogStyle.DEBUG },
@@ -10,10 +11,8 @@ const parameters = [
     { color: LogColor.BLUE },
     { text: "give me a OHHHHEAHHHHHHHHHHHHH", color: "UWU" },
     { text: "Nouvelle mise à jour disponible sur github.com/PoNexiOFF", style: LogStyle.WARNING },
-]
+];
 
 for (const parameter of parameters) {
-    const newLog = new LogEntry(parameter);
-    const data = newLog.display()
-    console.log(data)
+    const newLog = new LogEntry(parameter).display();
 }

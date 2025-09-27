@@ -1,6 +1,6 @@
-// ./functions/formatTime.js
-function formatDate(date) {
-    const pad = n => n.toString().padStart(2, '0');
+// ./functions/formatTime.ts
+export function formatDate(date: Date): string {
+    const pad = (n: number) => n.toString().padStart(2, '0');
     const Y = date.getFullYear();
     const M = pad(date.getMonth() + 1);
     const D = pad(date.getDate());
@@ -9,5 +9,3 @@ function formatDate(date) {
     const s = pad(date.getSeconds());
     return `${Y}-${M}-${D} ${h}:${m}:${s}`;
 }
-
-module.exports = { formatDate }
