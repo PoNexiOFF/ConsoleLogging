@@ -1,7 +1,7 @@
 ## Example - LogEntry.toString()
 
 ```ts
-import { LogEntry, LogStyle } from "./index";
+import { LogEntry, LogStyle } from "lcore-cl";
 
 const log = new LogEntry({
     text: "Database connected",
@@ -20,10 +20,12 @@ Output:
     date: 2025-09-28T18:57:17.255Z,
     string: "2025-09-26 23:42:10 [INFO] Database connected"
 }
+```
 
+```bash
 2025-09-26 23:42:10 [INFO] Database connected
 ```
 
-[!NOTE]
+> [!NOTE]
 > toString() returns an object with { date, string }.
 > Useful if you want both the timestamp as a Date object and the full log line as plain text.

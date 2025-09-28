@@ -1,7 +1,7 @@
 ## Example LogEntry.clone()
 
 ```ts
-import { LogEntry, LogStyle } from "./index";
+import { LogEntry, LogStyle } from "lcore-cl";
 
 // Original log
 const original = new LogEntry({

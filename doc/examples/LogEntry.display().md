@@ -2,7 +2,7 @@
 
 ```ts
 // Import the main logging components
-import { LogEntry, LogColor, LogStyle } from "./index";
+import { LogEntry, LogColor, LogStyle } from "lcore-cl";
 
 // Define an array of log entries with different styles and colors
 const logs = [

@@ -1,7 +1,7 @@
 ## Example - LogEntry.toJSON()
 
 ```ts
-import { LogEntry, LogStyle } from "./index";
+import { LogEntry, LogStyle } from "lcore-cl";
 
 const log = new LogEntry({
     text: "Critical error",
