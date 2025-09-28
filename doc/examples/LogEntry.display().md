@@ -1,4 +1,4 @@
-## Examples
+## Example - LogEntry.display()
 
 ```ts
 // Import the main logging components
@@ -23,5 +23,6 @@ Output:
 2025-09-26 23:30:12 [WARN] Warning: High memory usage
 2025-09-26 23:30:12 [CUSTOM] Custom message
 ```
+
 > [!NOTE]
 > Colors are **not displayed** here in GitHub Markdown. They will appear correctly in a terminal that supports ANSI escape codes (e.g., Node.js console).

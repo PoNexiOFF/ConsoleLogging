@@ -1,16 +1,19 @@
 {
-  "name": "lcore-cl",
-  "version": "1.0.1",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": ["dist"],
-  "scripts": {
-    "build": "tsc"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.2"
-  },
-  "dependencies": {
-    "lcore-cl": "^1.0.0"
-  }
+    "name": "lcore-cl",
+    "version": "1.0.1",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist",
+        "doc"
+    ],
+    "scripts": {
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "typescript": "^5.9.2"
+    },
+    "dependencies": {
+        "lcore-cl": "^1.0.0"
+    }
 }

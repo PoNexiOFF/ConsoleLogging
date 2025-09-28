@@ -1,6 +1,13 @@
-# LightCore ConsoleLogging
-
-> A TypeScript library for console logging with colors, timestamps, and custom styles.
+<div align="center">
+    <h1>LightCore ConsoleLogging</h1>
+	<p>
+		<a href="https://www.npmjs.com/package/lcore-cl"><img src="https://img.shields.io/npm/v/lcore-cl.svg?maxAge=3600" alt="npm version" /></a>
+		<a href="https://www.npmjs.com/package/lcore-cl"><img src="https://img.shields.io/npm/dt/lcore-cl.svg?maxAge=3600" alt="npm downloads" /></a>
+	</p>
+  <p>
+    A TypeScript library for console logging with colors, timestamps, and custom styles.
+  </p>
+</div>
 
 ---
 
@@ -57,3 +64,7 @@ cd ConsoleLogging
 npm install
 npm run build
 ```
+
+## Documentation
+
+For more details, usage examples, and API reference, please check the documentation inside the `doc/` folder.
