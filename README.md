@@ -67,4 +67,4 @@ npm run build
 
 ## Documentation
 
-For more details, usage examples, and API reference, please check the documentation inside the `doc/` folder.
+For detailed information, usage examples, and API reference, please see the documentation in the `doc/` folder or visit: [Documentation](https://github.com/PoNexiOFF/ConsoleLogging/tree/main/doc)
